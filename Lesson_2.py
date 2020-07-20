@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup as bs
 import requests
 from pprint import pprint
 import re
-from time import sleep
 
 vacancy = input('Введите название вакансии: ')
 # параметры
