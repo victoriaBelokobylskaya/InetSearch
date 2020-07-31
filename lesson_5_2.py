@@ -31,7 +31,7 @@ goods = []
 
 
 for hit in hits:
-    time.sleep(2)
+    time.sleep(2) # доделаю позже, что то не получается
     element = driver.find_element_by_xpath("//div[@data-init='ajax-category-carousel']//a[@class='next-btn sel-hits-button-next']")
     # element = hit.find_element_by_css_selector('a.next-btn.sel-hits-button-next')
     hov = ActionChains(driver).move_to_element(element).click()
@@ -43,6 +43,8 @@ for hit in hits:
         hit_d['Product'] = li.find_element_by_class_name('sel-product-tile-title').get_attribute('data-product-info')
 
         goods.append(hit_d)
+        
+        
 
 
 pprint(goods)
